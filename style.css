@@ -1,0 +1,558 @@
+/*
+Theme Name:イタリアンレストラン
+*/
+/* 
+画面のスタイルシート
+*/
+body {
+    font-family: Myriad Pro;
+    margin: 0;
+    color: #707070; 
+}
+img {
+    margin: 0;
+    padding: 0;
+}
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+    color: #707070;
+}
+/* 
+[header]のスタイルシート
+*/
+header{
+    width: 100%;
+    height: 145px;
+    background: linear-gradient(to bottom , #F7E8CC , #C1A581); /* 徐々に透明にする */
+}
+.header-logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 16px;
+}
+.block-header ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.block-header li{
+    display: inline-block;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    padding-left: 60px;
+    padding-right: 60px;
+    border-right: 3px solid #707070;
+}
+.block-header a{
+    text-decoration: none;
+    color: #707070;
+}
+.header-sp{
+    display: none;
+}
+/* 
+スマホ用ハンバーガーメニュー（
+*/
+/* ヘッダーボタン */
+.header-sp{
+    display: none;
+}
+.header-button{
+    width: 69px;
+    height: 69px;
+    padding: 10px;
+    box-sizing: border-box;
+    cursor: pointer;
+    border-color: transparent;
+    background-color: transparent;
+}
+/*inputのcheckboxは非表示に*/
+.h-menuCheckbox {
+    display: none;
+}
+.h-menu_icon {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+}
+/*3本線*/
+.hamburger-icon, .hamburger-icon::before, .hamburger-icon::after {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: 102;
+    width: 32px;
+    height: 3px;
+    background-color: #707070;
+    cursor: pointer;
+}
+.hamburger-icon:before {
+    top: 14px;
+}
+.hamburger-icon:after {
+    top: 28px;
+}
+/*メニュー以外を暗くする*/
+#h-menu_black {
+    display: none;
+    position: fixed;
+    z-index: 98;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #F7E8CC;
+    opacity: 0;
+    transition: .7s ease-in-out;
+}
+/*中身*/
+#h-menu_content {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 101;
+    width: 100%;
+    max-width: 320px;
+    height: 100vh;
+    padding: 53px 16px 16px;
+    background: #C1A581;
+    overflow: auto;
+    transition: .3s ease-in-out;
+    -webkit-transform: translateX(-105%);
+    transform: translateX(-105%);
+}
+/*チェックボックスにチェックが入ったら表示*/
+input:checked ~ .h-menu_icon .hamburger-icon{
+    background: transparent;
+}
+input:checked ~ .h-menu_icon .hamburger-icon::before{
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    top:10px;
+    z-index:999;
+}
+input:checked ~ .h-menu_icon .hamburger-icon::after{
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    top:10px;
+    z-index:999;
+}
+input:checked ~ #h-menu_black {
+    display: block;
+    opacity: .8;
+}
+#h-menu_checkbox:checked ~ #h-menu_content {
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%);
+    box-shadow: 6px 0 25px rgba(0,0,0,.15);
+}
+.h-menu_icon .hamburger-icon,
+.h-menu_icon .hamburger-icon::before,
+.h-menu_icon .hamburger-icon::after,
+#h-menu_black,
+#h-menu_content{
+    -webkit-transition: all .3s;
+    transition: all .3s;
+}
+#h-menu_content ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+#h-menu_content ul li{
+    border-bottom: solid 1px white;
+}
+#h-menu_content li a {
+    display: block;
+    color: white;
+    font-size: 14px;
+    padding: 24px;
+    text-decoration: none;
+    transition-duration: 0.2s;
+}
+.h-menu_policy {
+    font-size: 12px;
+    color: white;
+    margin-top: 100px;
+    text-align: left;
+}
+/* レスポンシブ（タブレット） */
+@media screen and (max-width: 959px) { 
+    .block-header li{
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+/* レスポンシブ（スマホ） */
+@media screen and (max-width: 480px) { 
+    header{
+        height: 90px;
+    }
+    .header-sp{
+        width: 100%;
+        display: flex;
+        justify-content: end;
+        padding-top: 10px;
+    }
+    .header-sp img{
+        margin-top: 10px;
+    }
+    .block-header{
+        display: none;
+    }
+}
+
+/* 
+[main]のスタイルシート
+*/
+/* スライダー */
+.slider img{
+    width: 100%;
+    height: 441px;
+    object-fit: cover; /* 画像のトリミング */
+}
+ul.slider > li:not(:first-child) {
+    display: none;
+}
+/* ニュース記事 */
+.news{
+    width: 100%;
+    height: 125px;
+    background-color: #F7E8CC;
+    display: flex;
+}
+.news p{
+    padding-top: 18px;
+    margin-left: 250px;
+    font-size: 16px;
+    margin-bottom: 0;
+}
+.news span{
+    font-weight: bolder;
+    margin-right: 33px;
+}
+.news button{
+    width: 133px;
+    height: 36px;
+    background-color: white;
+
+}
+.news a{
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    margin-top: 0;
+    margin-left: auto;
+    margin-right: 30px;
+}
+/* コンセプト */
+.concept{
+    background-color: #FFFBF4;
+}
+.concept h3{
+    text-align: center;
+    font-size: 32px;
+    font-weight: bolder;
+    padding-top: 43px;
+}
+.concept-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.concept-text{
+    margin-left: 81px;
+}
+.concept-text p{
+    line-height: 50px;
+    margin-bottom: 0;
+}
+.concept-content img{
+    margin-bottom: 21px;
+}
+/* レスポンシブ（タブレット） */
+@media screen and (max-width: 959px) { 
+    .news{
+        height: 200px;
+    }
+    .news p{
+        margin-left: 10px;
+    }
+    /* コンセプト */
+    .concept h3{
+        padding-top: 23px;
+        padding-bottom: 30px;
+    }
+    .concept-text{
+        margin-left: 20px;
+    }
+    .concept-content img{
+        width: 50%;
+        height: 300px;
+    }
+}
+/* レスポンシブ（スマホ） */
+@media screen and (max-width: 480px) { 
+    .slider img{
+        height: 200px;
+    }
+    .news{
+        height: 300px;
+        display: inline-block;
+    }
+    .news p{
+        margin-left: 10px;
+        margin-right: 10px;
+        font-size: 14px;
+    }
+    .news span{
+        display: block;
+        font-weight: bolder;
+        margin-right: 33px;
+    }
+    .news button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 0;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    /* コンセプト */
+    .concept h3{
+    font-size: 20px;
+    }
+    .concept-content{
+        display: block;
+    }
+    .concept-text{
+        margin-left: 0;
+    }
+    .concept-content img{
+        width: 100%;
+        height: 300px;
+    }
+    .concept-text p{
+        text-align: center;
+    }
+    .news a{
+        margin-right: 0;
+    }
+}
+
+/* メニュー */
+.menu{
+    background-color: white;
+    width: 100%;
+    height: auto;
+    background-image: url(image/background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.menu h3{
+    font-size: 60px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 24px;
+    padding-bottom: 29px;
+    font-style: italic;
+}
+.menu-first, .menu-second{
+    display: flex;
+    justify-content: center;   
+}
+.menu-second{
+    padding-bottom: 28px;
+}
+.menu-1{
+    background-image: url(image/morning.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 300px;
+    height: 410px;
+    margin-right: 62.5px;
+}
+.menu-2{
+    background-image: url(image/lunch.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 300px;
+    height: 410px;
+    margin-right: 62.5px;
+    margin-left: 62.5px;
+}
+.menu-3{
+    background-image: url(image/dinner.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 300px;
+    height: 410px;
+    margin-left: 62.5px;
+}
+.menu-4{
+    background-image: url(image/drink.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 300px;
+    height: 410px;
+    margin-right: 75px;
+}
+.menu-5{
+    background-image: url(image/party-course.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 300px;
+    height: 410px;
+    margin-left: 75px;
+}
+.menu-first p, .menu-second p{
+    text-align: center;
+    margin-top: 226px;
+    font-size: 15px
+}
+.menu-first button, .menu-second button{
+    width: 133px;
+    height: 36px;
+    display: inline;
+    background-color: white;
+    margin-left: 83px;
+}
+/* レスポンシブ（タブレット） */
+@media screen and (max-width: 959px) { 
+    .menu-1{
+        width: 254px;
+        height: 350px;
+        margin-right: 10px;
+    }
+    .menu-2{    
+        width: 254px;
+        height: 350px;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+    .menu-3{    
+        width: 254px;
+        height: 350px;
+        margin-left: 10px;
+    }
+    .menu-4{
+        width: 254px;
+        height: 350px;
+        margin-right: 75px;
+    }
+    .menu-5{
+        width: 254px;
+        height: 350px;
+        margin-left: 75px;
+    }
+    .menu-first p, .menu-second p{
+        margin-top: 186px;
+        font-size: 14px
+    }
+    .menu-first button, .menu-second button{
+        margin-left: 58px;
+    }
+}
+/* レスポンシブ（スマホ） */
+@media screen and (max-width: 480px) { 
+    .menu-first, .menu-second{
+        display: block;
+        width: 100%;
+    }
+    .menu-1 ,.menu-2, .menu-3, .menu-4, .menu-5{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .menu-first p, .menu-second p{
+        text-align: center;
+        margin-top: 0;
+        font-size: 15px;
+        padding-left: 5px;
+        padding-right: 5px;
+        padding-top: 180px;
+    }
+    .menu-first button, .menu-second button{
+        margin-top: 0px;
+    }
+}
+
+/* 
+[footer]のスタイルシート
+*/
+footer{
+    width: 100%;
+    height: 320px;
+    background: linear-gradient(to bottom , #F7E8CC , #C1A581); /* 徐々に透明にする */
+}
+.footer-logo{
+    padding-top: 28px;
+    padding-left: 163px;
+}
+.restaurant-detail{
+    padding-left: 163px;
+}
+.block-footer ul{
+    display: flex;
+    justify-content: end;
+}
+.block-footer li{
+    display: inline-block;
+    font-size: 24px;
+    font-weight: 600;
+    padding-left: 60px;
+    padding-right: 60px;
+    border-right: 3px solid #707070;
+    letter-spacing: 1.5px;
+}
+.privacy p{
+    margin: 16px auto;
+    text-align: center;
+}
+/* レスポンシブ（タブレット） */
+@media screen and (max-width: 959px) { 
+    .footer-logo{
+        padding-top: 28px;
+        padding-left: 53px;
+    }
+    .restaurant-detail{
+        padding-left: 53px;
+    }
+    .block-footer ul{
+        justify-content: center;
+    }
+    .block-footer li{
+        letter-spacing: 1.5px;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+/* レスポンシブ（スマホ） */
+@media screen and (max-width: 480px) { 
+    footer{
+        height: 275px;
+    }
+    .block-footer ul{
+        display: none;
+    }
+    .footer-logo{
+        padding-top: 28px;
+        padding-left: 56px;
+    }
+    .footer-logo img{
+        height: auto;
+    }
+    .restaurant-detail{
+        padding-left: 58px;
+    }
+    .privacy p{
+       font-size: 14px;
+    }
+}
