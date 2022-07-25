@@ -16,18 +16,28 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <div class="block-header">
-            <div class="header-logo">
-                <img src="image/logo.png" alt="レガーメのロゴ">
-            </div>
+    <header class="block-header">
+        <div class="header-logo">
+            <img src="image/logo.png" alt="レガーメのロゴ">
+        </div>
+        <div class="header-nav">
             <nav>
                 <ul>
-                    <li><a href="#">HOME</a></li>
-                    <li><a href="#">MENU</a></li>
-                    <li><a href="#">RESERVE</a></li>
-                    <li><a href="#">ACCESS</a></li>
-                    <li><a href="#">NEWS</a></li>
+                    <a href="#"><li>Home</li></a>
+                    <ul class="dropdwn">
+                        <li>Menu
+                            <ul class="dropdwn_menu">
+                                <li><a href="#">Moring</a></li>
+                                <li><a href="#">Lunch</a></li>
+                                <li><a href="#">Dinner</a></li>
+                                <li><a href="#">Drink</a></li>
+                                <li><a href="#">Party</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <a href="#"><li>Reserve</li></a>
+                    <a href="#"><li>Access</li></a>
+                    <a href="#"><li>News</li></a>
                 </ul>
             </nav>
         </div>
@@ -41,14 +51,22 @@
                     <label id="h-menu_black" class="h-menuCheckbox" for="h-menu_checkbox"></label>
                     <div id="h-menu_content">
                         <ul>
-                            <li><a href="#">HOME</a></li>
-                            <li><a href="#">MENU</a></li>
-                            <li><a href="#">RESERVE</a></li>
-                            <li><a href="#">ACCESS</a></li>
-                            <li><a href="#">NEWS</a></li>
+                            <li><a href="#">Home</a></li>
+                            <li>Menu
+                                <div class="service_menu">
+                                    <a href="#" style="font-size: 12px;color:whitesmoke;">Morning</a>
+                                    <a href="#" style="font-size: 12px;color:whitesmoke;">Lunch</a>
+                                    <a href="#" style="font-size: 12px;color:whitesmoke;">Dinner</a>
+                                    <a href="#" style="font-size: 12px;color:whitesmoke;">Drink</a>
+                                    <a href="#" style="font-size: 12px;color:whitesmoke;">Party</a>
+                                </div>
+                            </li>
+                            <li><a href="#">Reserve</a></li>
+                            <li><a href="#">Access</a></li>
+                            <li><a href="#">News</a></li>
                         </ul>
                         <div class="h-menu_policy">
-                            <p>©〇〇〇〇〇〇 ALL RIGHTS RESERVED</p>
+                            <p>©Legame ALL RIGHTS RESERVED</p>
                         </div>
                     </div>
                 </div>
@@ -61,82 +79,131 @@
             <li><a href="#"><img src="image/italy-restaurant.jpg" alt="イタリアのレストラン"></a></li>
             <li><a href="#"><img src="image/cafe.jpg" alt="カフェ"></a></li>
         </ul>
-        <div class="news">
-            <div class="news-content">
-                <p><span>2022.3.20</span>テキスト入力テキスト入力テキスト入力テキスト入力テキスト</p>
-                <p><span>2022.2.25</span>テキスト入力テキスト入力テキスト入力テキスト入力テキスト入力テキスト入力テキスト入力</p>
-                <p><span>2022.1.20</span>テキスト入力テキスト入力テキスト入力テキスト入力テキスト入</p>
+        <div class="topics">
+            <div class="container">
+                <p>7月の季節限定メニューが始まりました</p>
+                <a href="">詳しくはこちら</a>
             </div>
-            <a href=""><button>More →</button></a>
         </div>
         <div class="concept">
-            <h3>コンセプト入力コンセプト入力コンセプト入力コンセプト入力</h3>
-            <div class="concept-content">
-                <img src="image/pasuta.png" alt="パスタ">
-                <div class="concept-text">
-                    <p>テキスト入力テキスト入力テキスト入力テキスト<br>
-                    テキスト入力テキスト入力テキスト入力テキスト<br>
-                    テキスト入力テキスト入力テキスト入力テキスト<br>
-                    テキスト入力テキスト入力テキスト入力テキスト<br>
-                    テキスト入力テキスト入力テキスト入力テキスト</p>
+            <div class="container">
+                <div class="concept-logo">
+                    <img src="image/concept-logo.png" alt="">
+                </div>
+                <h3>１つ１つ洗練された素材と最高の料理でおもてなし</h3>
+                <div class="concept-content">
+                    <img src="image/pasuta.png" alt="パスタ">
+                    <div class="concept-text">
+                        <p>テキスト入力テキスト入力テキスト入力テキスト<br>
+                        テキスト入力テキスト入力テキスト入力テキスト<br>
+                        テキスト入力テキスト入力テキスト入力テキスト<br>
+                        テキスト入力テキスト入力テキスト入力テキスト<br>
+                        テキスト入力テキスト入力テキスト入力テキスト<br>
+                        テキスト入力テキスト入力テキスト入力テキスト</p>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="menu">
-            <h3>MENU</h3>
-            <div class="menu-first">
-                <div class="menu-1">
-                    <p>テキスト入力テキスト入力テキスト<br>
-                    入力ストテキスト入力テキスト<br>
-                    テキストテキスト入力</p>
-                    <a href=""><button>More →</button></a>
+            <div class="container">
+                <h3>Menu</h3>
+                <div class="menu-first">
+                    <div class="menu-1">
+                        <p>パンケーキやトーストにフレッシュな野菜を使用したサラダなどをご用意いたします。</p>
+                        <a href=""><button>More →</button></a>
+                    </div>
+                    <div class="menu-2">
+                        <p>素材にこだわったマルゲリータやペンネ、ラザーニャなどが当店の一押しメニューです</p>
+                        <a href=""><button>More →</button></a>
+                    </div>
+                    <div class="menu-3">
+                        <p>こだわり抜いた技法と食材により、基本を押さえながらもセンスの光る品々が供されます。</p>
+                        <a href=""><button>More →</button></a>
+                    </div>
                 </div>
-                <div class="menu-2">
-                    <p>テキスト入力テキスト入力テキスト<br>
-                    入力ストテキスト入力テキスト<br>
-                    テキストテキスト入力</p>
-                    <a href=""><button>More →</button></a>
-                </div>
-                <div class="menu-3">
-                    <p>テキスト入力テキスト入力テキスト<br>
-                    入力ストテキスト入力テキスト<br>
-                    テキストテキスト入力</p>
-                    <a href=""><button>More →</button></a>
+                <div class="menu-second">
+                    <div class="menu-4">
+                        <p>トリノブランドで挽いたコーヒーが当店のおすすめです。アルコールはトスカーナ名産のワインなどをご用意しております。</p>
+                        <a href=""><button>More →</button></a>
+                    </div>
+                    <div class="menu-5">
+                        <p>当店では、貸切のパーティや少人数制のパーティのご予約も承っております。</p>
+                        <a href=""><button>More →</button></a>
+                    </div>
                 </div>
             </div>
-            <div class="menu-second">
-                <div class="menu-4">
-                    <p>テキスト入力テキスト入力テキス<br>ト入力ストテキスト入力テキスト</p>
+        </div>
+        <div class="group">
+            <div class="news container">
+                <h3>News</h3>
+                <div class="news-content">
+                    <div class="news-topics">
+                        <a href="">2022.7.15</a>
+                        <a href="" style="font-weight: normal;">7月の季節限定メニューが始まりました</a>
+                    </div>
+                    <div class="news-topics">
+                        <a href="">2022.4.20</a>
+                        <a href="" style="font-weight: normal;">ゴールデンウィークの営業時間について</a>
+                    </div>
+                    <div class="news-topics">
+                        <a href="">2022.2.18</a>
+                        <a href="" style="font-weight: normal;">臨時休業のお知らせ</a>
+                    </div>
+                    <div class="news-topics">
+                        <a href="">2022.1.1</a>
+                        <a href="" style="font-weight: normal;">新年のご挨拶</a>
+                    </div>
+                    <div class="news-topics">
+                        <a href="">2021.11.20</a>
+                        <a href="" style="font-weight: normal;">臨時休業のお知らせ</a>
+                    </div>
                     <a href=""><button>More →</button></a>
+                    <div class="news-image">
+                        <img src="image/wine.png" alt="">
+                    </div>
                 </div>
-                <div class="menu-5">
-                    <p>テキスト入力テキスト入力テキス<br>ト入力ストテキスト入力テキスト</p>
-                    <a href=""><button>More →</button></a>
+            </div>
+            <div class="information container">
+                <h3>Information</h3>
+                <div class="information-content">
+                    <div class="information-topics">
+                        <p>[Mon-Thu]</p>
+                        <p style="font-weight: normal; font-size: 20px;">11：00 〜 22：00 （LO：FOOD 21：00 , Drink 21：30）</p>
+                    </div>
+                    <div class="information-topics">
+                        <p>[Fri&Sat]</p>
+                        <p style="font-weight: normal; font-size: 20px;">11：00 〜 23：30 （LO：FOOD 22：00 , Drink 23：00）</p>
+                    </div>
+                    <div class="information-topics">
+                        <p>[Sun&Holiday]</p>
+                        <p style="font-weight: normal; font-size: 20px;">11：00 〜 23：00 （LO：FOOD 22：00 , Drink 22：30）</p>
+                    </div>
+                    <div class="reserve-content">
+                        <p>TEL：03-0000-0000</p>
+                        <a href=""><button>Reservation</button></a>
+                        <img src="image/pasuta-2.png" alt="">
+                    </div>
                 </div>
             </div>
         </div>
     </div>
     <footer>
-        <div class="block-footer">
+        <div class="block-footer container">
             <div class="footer-logo">
                 <img src="image/logo.png" alt="レガーメのロゴ">
             </div>
             <div class="restaurant-detail">
-                <p>東京都〇〇区〇〇〇〇　〇〇-〇〇</p>
+                <p>東京都目黒区〇〇〇〇　〇〇-〇〇</p>
                 <p>〇〇〇〇ビル</p>
-                <p>〇〇-〇〇〇〇-〇〇〇〇</p>
+                <p>03-0000-0000</p>
             </div>
-            <nav>
-                <ul>
-                    <li><a href="#">HOME</a></li>
-                    <li><a href="#">MENU</a></li>
-                    <li><a href="#">RESERVE</a></li>
-                    <li><a href="#">ACCESS</a></li>
-                    <li><a href="#">NEWS</a></li>
-                </ul>
-            </nav>
+            <div class="sns-image">
+                <a href=""><img src="image/line.svg" alt=""></a>
+                <a href=""><img src="image/instagram.svg" alt=""></a>
+                <a href=""><img src="image/facebook.svg" alt=""></a>
+            </div>
             <div class="privacy">
-                <p>©〇〇〇〇〇〇 ALL RIGHTS RESERVED</p>
+                <p>©Legame  ALL RIGHTS RESERVED</p>
             </div>
         </div>
     </footer>
@@ -144,6 +211,6 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- JS（slick） -->
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script src="slide.js"></script>
+    <script src="style.js"></script>
 </body>
 </html>
