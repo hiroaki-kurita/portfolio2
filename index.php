@@ -159,7 +159,7 @@
                     </div>
                     <a href=""><button>More →</button></a>
                     <div class="news-image">
-                        <img src="image/wine.jpg" alt="">
+                        <img src="image/wine.png" alt="">
                     </div>
                 </div>
             </div>
@@ -181,7 +181,7 @@
                     <div class="reserve-content">
                         <a href=""><button>Reservation</button></a>
                         <div class="reserve-image">
-                            <img src="image/pasuta-2.jpg" alt="">
+                            <img src="image/pasuta-2.png" alt="">
                         </div>
                     </div>
                 </div>
