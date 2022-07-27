@@ -88,17 +88,17 @@
         <div class="concept">
             <div class="container">
                 <div class="concept-logo">
-                    <img src="image/concept-logo.png" alt="">
+                    <img src="image/concept-logo.jpg" alt="">
                 </div>
                 <h3>１つ１つ洗練された素材と最高の料理でおもてなし</h3>
                 <div class="concept-content">
-                    <img src="image/pasuta.png" alt="パスタ">
+                    <img src="image/pasuta.jpg" alt="パスタ">
                     <div class="concept-text">
-                        <p>テキスト入力テキスト入力テキスト入力テキスト<br>
-                        テキスト入力テキスト入力テキスト入力テキスト<br>
-                        テキスト入力テキスト入力テキスト入力テキスト<br>
-                        テキスト入力テキスト入力テキスト入力テキスト<br>
-                        テキスト入力テキスト入力テキスト入力テキスト<br>
+                        <p>テキスト入力テキスト入力テキスト入力テキスト
+                        テキスト入力テキスト入力テキスト入力テキスト
+                        テキスト入力テキスト入力テキスト入力テキスト
+                        テキスト入力テキスト入力テキスト入力テキスト
+                        テキスト入力テキスト入力テキスト入力テキスト
                         テキスト入力テキスト入力テキスト入力テキスト</p>
                     </div>
                 </div>
@@ -109,26 +109,26 @@
                 <h3>Menu</h3>
                 <div class="menu-first">
                     <div class="menu-1">
-                        <p>パンケーキやトーストにフレッシュな野菜を使用したサラダなどをご用意いたします。</p>
-                        <a href=""><button>More →</button></a>
+                        <img src="image/morning.jpg" alt="">
+                        <p>&nbsp;</p>
                     </div>
                     <div class="menu-2">
-                        <p>素材にこだわったマルゲリータやペンネ、ラザーニャなどが当店の一押しメニューです</p>
-                        <a href=""><button>More →</button></a>
+                        <img src="image/lunch.jpg" alt="">
+                        <p>&nbsp;</p>
                     </div>
                     <div class="menu-3">
-                        <p>こだわり抜いた技法と食材により、基本を押さえながらもセンスの光る品々が供されます。</p>
-                        <a href=""><button>More →</button></a>
+                        <img src="image/dinner.jpg" alt="">
+                        <p>&nbsp;</p>
                     </div>
                 </div>
                 <div class="menu-second">
                     <div class="menu-4">
-                        <p>トリノブランドで挽いたコーヒーが当店のおすすめです。アルコールはトスカーナ名産のワインなどをご用意しております。</p>
-                        <a href=""><button>More →</button></a>
+                        <img src="image/drink.jpg" alt="">
+                        <p>&nbsp;</p>
                     </div>
                     <div class="menu-5">
-                        <p>当店では、貸切のパーティや少人数制のパーティのご予約も承っております。</p>
-                        <a href=""><button>More →</button></a>
+                        <img src="image/party-course.jpg" alt="">
+                        <p>&nbsp;</p>
                     </div>
                 </div>
             </div>
@@ -159,7 +159,7 @@
                     </div>
                     <a href=""><button>More →</button></a>
                     <div class="news-image">
-                        <img src="image/wine.png" alt="">
+                        <img src="image/wine.jpg" alt="">
                     </div>
                 </div>
             </div>
@@ -168,20 +168,21 @@
                 <div class="information-content">
                     <div class="information-topics">
                         <p>[Mon-Thu]</p>
-                        <p style="font-weight: normal; font-size: 20px;">11：00 〜 22：00 （LO：FOOD 21：00 , Drink 21：30）</p>
+                        <p style="font-weight: normal; font-size: 18px;">11：00 〜 22：00 （LO：FOOD 21：00 , Drink 21：30）</p>
                     </div>
                     <div class="information-topics">
                         <p>[Fri&Sat]</p>
-                        <p style="font-weight: normal; font-size: 20px;">11：00 〜 23：30 （LO：FOOD 22：00 , Drink 23：00）</p>
+                        <p style="font-weight: normal; font-size: 18px;">11：00 〜 23：30 （LO：FOOD 22：00 , Drink 23：00）</p>
                     </div>
                     <div class="information-topics">
                         <p>[Sun&Holiday]</p>
-                        <p style="font-weight: normal; font-size: 20px;">11：00 〜 23：00 （LO：FOOD 22：00 , Drink 22：30）</p>
+                        <p style="font-weight: normal; font-size: 18px;">11：00 〜 23：00 （LO：FOOD 22：00 , Drink 22：30）</p>
                     </div>
                     <div class="reserve-content">
-                        <p>TEL：03-0000-0000</p>
                         <a href=""><button>Reservation</button></a>
-                        <img src="image/pasuta-2.png" alt="">
+                        <div class="reserve-image">
+                            <img src="image/pasuta-2.jpg" alt="">
+                        </div>
                     </div>
                 </div>
             </div>
