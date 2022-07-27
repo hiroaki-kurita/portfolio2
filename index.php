@@ -181,7 +181,7 @@
                     <div class="reserve-content">
                         <a href=""><button>Reservation</button></a>
                         <div class="reserve-image">
-                            <img src="image/pasuta-2.png" alt="">
+                            <img src="image/pasuta2.png" alt="">
                         </div>
                     </div>
                 </div>
